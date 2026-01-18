@@ -41,7 +41,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 3. LÓGICA DEL BOT ---
-os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"] if "GOOGLE_API_KEY" in st.secrets else "AIzaSyC0LvZwy9O53FeVk3lQ74zrmVLr2y88BZE"
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 st.title("👮‍♂️ Coordinador Virtual")
 st.write("Bienvenido. Pregúntame cualquier duda sobre el Manual de Convivencia.")
@@ -101,4 +101,5 @@ try:
 
 except Exception as e:
     st.error(f"Error técnico: {e}")
+
 
