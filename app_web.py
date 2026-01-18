@@ -51,7 +51,7 @@ def cargar_cerebro():
     ruta_actual = os.path.dirname(os.path.abspath(__file__))
     ruta_db = os.path.join(ruta_actual, "chroma_db")
     
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-001")
     
     # Al haber puesto el parche de asyncio arriba, esto ya no fallará
     vectorstore = Chroma(persist_directory=ruta_db, embedding_function=embeddings)
@@ -101,6 +101,7 @@ try:
 
 except Exception as e:
     st.error(f"Error técnico: {e}")
+
 
 
 
