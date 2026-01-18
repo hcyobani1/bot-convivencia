@@ -1,3 +1,8 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+# ... aquí siguen tus import streamlit as st, etc ...
 import streamlit as st
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
@@ -131,4 +136,5 @@ if st.button("🔍 Consultar Manual"):
         st.warning("Por favor escribe una pregunta.")
 
 st.markdown("---")
+
 st.caption("Sistema de IA Experimental - Institución Educativa Nuestra Señora del Rosario")
