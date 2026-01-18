@@ -69,7 +69,7 @@ def cargar_cerebro():
 try:
     qa_chain = cargar_cerebro()
     
-    pregunta = st.text_input("Escribe la situación aquí:", placeholder="Ej: Me insultaron por Facebook...")
+    pregunta = st.text_input("Escribe la situación aquí:", placeholder="Ej: No ingresé a una clase...")
 
     if st.button("🔍 Consultar Manual"):
         if pregunta:
@@ -101,3 +101,4 @@ try:
 
 except Exception as e:
     st.error(f"Error técnico: {e}")
+
