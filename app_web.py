@@ -61,7 +61,7 @@ def cargar_cerebro():
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
-        retriever=vectorstore.as_retriever(search_kwargs={"k": 3}),
+        retriever=vectorstore.as_retriever(search_kwargs={"k": 25}),
         return_source_documents=True
     )
     return qa_chain
@@ -101,5 +101,6 @@ try:
 
 except Exception as e:
     st.error(f"Error técnico: {e}")
+
 
 
